@@ -10,34 +10,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f6f7f9;
-    --ink: #172033;
-    --muted: #5a6478;
-    --rule: #d5d9e1;
-    --link: #0b5f8a;
-    --link-hover: #083f5c;
+    --bg: #ffffff;
+    --ink: #3a3f4b;
+    --muted: #6b7280;
+    --rule: #e5e7eb;
+    --link: #1a6aa6;
+    --link-hover: #0f4a78;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #12161f;
-      --ink: #e4e8f0;
-      --muted: #98a2b6;
-      --rule: #2b3344;
+      --bg: #181b22;
+      --ink: #d3d8e1;
+      --muted: #929bab;
+      --rule: #2a2f3a;
       --link: #7cc4ea;
       --link-hover: #b4e0f6;
     }
   }
   * { box-sizing: border-box; }
-  html { font-size: 112.5%; }
+  html { font-size: 100%; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: "Newsreader", Georgia, "Times New Roman", serif;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
   }
   main {
-    max-width: 38rem;
+    max-width: 40rem;
     margin: 0 auto;
     padding: 4rem 1.25rem 5rem;
   }
@@ -49,13 +49,13 @@
     margin-bottom: 2.5rem;
   }
   h1 {
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     line-height: 1.1;
     font-weight: 600;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.01em;
     margin: 0 0 0.5rem;
   }
-  .tagline { margin: 0; color: var(--muted); font-style: italic; }
+  .tagline { margin: 0; color: var(--muted); }
   .photo {
     width: 8rem;
     height: 8rem;
@@ -84,9 +84,8 @@
   .links .label { width: 6.5rem; color: var(--muted); flex-shrink: 0; }
   footer { margin-top: 3.5rem; color: var(--muted); font-size: 0.85rem; }
   @media (max-width: 30rem) {
-    html { font-size: 106%; }
     header { flex-direction: column-reverse; align-items: flex-start; }
-    h1 { font-size: 2.2rem; }
+    h1 { font-size: 1.85rem; }
   }
 </style>
 </head>
@@ -95,32 +94,29 @@
 
   <header>
     <div>
-      <h1>Andrea Pezzuolo</h1>
-      <p class="tagline">Software verification and static analysis</p>
+      <h2>Andrea Pezzuolo</h2>
     </div>
-    <!-- PHOTO: put a file named photo.jpg next to this index.html, then
-         delete the comment markers around the line below.
-    <img class="photo" src="photo.jpg" alt="Portrait of Your Name">
-    -->
+    <!-- <img class="photo" src="photo.jpg" alt=""> -->
   </header>
+
 
   <section>
     <p>
-      I’m finishing my MSc in Computer Science at the
+      I recently completed my MSc in Computer Science at the
       <a href="https://www.unipr.it/">University of Parma</a>, Italy.
       I’m interested in software verification, static analysis, and the
       low-level systems that benefit from them.
     </p>
     <p>
       My thesis is on the static analysis of Java reflection via abstract
-      interpretation, built on top of JLiSA.
+      interpretation, built on top of JLiSA. I'm now continuing to work on JLiSA for SV-COMP 2027.
     </p>
   </section>
 
   <h2>Interests</h2>
   <ul>
     <li>Abstract interpretation and static analysis</li>
-    <li>Software verification and SV-COMP</li>
+    <li>Software verification</li>
     <li>Systems programming in C, C++, and Rust</li>
     <!-- Add or remove as you like -->
   </ul>
@@ -128,19 +124,35 @@
   <h2>Projects</h2>
 
   <div class="project">
-    <h3>Static analysis of Java reflection (MSc thesis)</h3>
+    <h3>JLiSA and SV-COMP 2027</h3>
     <p>
-      Extending JLiSA to handle Java reflection with abstract interpretation,
-      evaluated on the SV-COMP benchmarks.
-      TODO
+      Ongoing work on JLiSA, a static analyzer for Java based on abstract interpretation,
+      built on top of the LiSA analysis library. It won 3rd place at the 2026
+      edition of the Competition on Software Verification (SV-COMP), where
+      verification tools are compared on a large public set of benchmark
+      programs.
     </p>
-    <a href="https://github.com/lisa-analyzer/jlisa">JLiSA on GitHub</a>
   </div>
 
   <div class="project">
-    <h3>Project name</h3>
-    <p>TODO</p>
-    <!-- <a href="https://github.com/your-username/your-repo">Source</a> -->
+    <h3>Static analysis of Java reflection (MSc thesis)</h3>
+    <p>
+      Extended JLiSA to handle Java reflection with abstract interpretation,
+      evaluated on the SV-COMP benchmarks.
+      Implemented the most common reflection methods by closely mimicking the internal
+      workings of reflection such as class loading and caching of reflection data (fields and methods)
+      in the abstract world.
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>Finite automata index with fuzzy matching</h3>
+    <p>
+      A Rust library built around finite automata and Levenshtein automata.
+      It includes a compressed binary serialization format, and the resulting
+      files can be queried straight from disk through memory mapping (mmap).
+    </p>
+    <a href="https://github.com/pezwastaken/fst_maps">Source</a>
   </div>
 
   <h2>Links and contact</h2>
