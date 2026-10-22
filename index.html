@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrea Pezzuolo</title>
+<meta name="description" content="MSc Computer Science, University of Parma. Static analysis and software verification.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --ink: #172033;
+    --muted: #5a6478;
+    --rule: #d5d9e1;
+    --link: #0b5f8a;
+    --link-hover: #083f5c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161f;
+      --ink: #e4e8f0;
+      --muted: #98a2b6;
+      --rule: #2b3344;
+      --link: #7cc4ea;
+      --link-hover: #b4e0f6;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 112.5%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 4rem 1.25rem 5rem;
+  }
+  header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.5rem;
+  }
+  .tagline { margin: 0; color: var(--muted); font-style: italic; }
+  .photo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--rule);
+  }
+  p { margin: 0 0 1rem; }
+  a { color: var(--link); text-underline-offset: 0.18em; }
+  a:hover { color: var(--link-hover); }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+  ul { margin: 0; padding-left: 1.2rem; }
+  li { margin-bottom: 0.4rem; }
+  .project { margin-bottom: 1.5rem; }
+  .project h3 { font-size: 1rem; font-weight: 600; margin: 0 0 0.25rem; }
+  .project p { margin: 0 0 0.35rem; }
+  .links { list-style: none; padding: 0; }
+  .links li { display: flex; gap: 1rem; margin-bottom: 0.3rem; }
+  .links .label { width: 6.5rem; color: var(--muted); flex-shrink: 0; }
+  footer { margin-top: 3.5rem; color: var(--muted); font-size: 0.85rem; }
+  @media (max-width: 30rem) {
+    html { font-size: 106%; }
+    header { flex-direction: column-reverse; align-items: flex-start; }
+    h1 { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <div>
+      <h1>Andrea Pezzuolo</h1>
+      <p class="tagline">Software verification and static analysis</p>
+    </div>
+    <!-- PHOTO: put a file named photo.jpg next to this index.html, then
+         delete the comment markers around the line below.
+    <img class="photo" src="photo.jpg" alt="Portrait of Your Name">
+    -->
+  </header>
+
+  <section>
+    <p>
+      I’m finishing my MSc in Computer Science at the
+      <a href="https://www.unipr.it/">University of Parma</a>, Italy.
+      I’m interested in software verification, static analysis, and the
+      low-level systems that benefit from them.
+    </p>
+    <p>
+      My thesis is on the static analysis of Java reflection via abstract
+      interpretation, built on top of JLiSA.
+    </p>
+  </section>
+
+  <h2>Interests</h2>
+  <ul>
+    <li>Abstract interpretation and static analysis</li>
+    <li>Software verification and SV-COMP</li>
+    <li>Systems programming in C, C++, and Rust</li>
+    <!-- Add or remove as you like -->
+  </ul>
+
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Static analysis of Java reflection (MSc thesis)</h3>
+    <p>
+      Extending JLiSA to handle Java reflection with abstract interpretation,
+      evaluated on the SV-COMP benchmarks.
+      TODO
+    </p>
+    <a href="https://github.com/lisa-analyzer/jlisa">JLiSA on GitHub</a>
+  </div>
+
+  <div class="project">
+    <h3>Project name</h3>
+    <p>TODO</p>
+    <!-- <a href="https://github.com/your-username/your-repo">Source</a> -->
+  </div>
+
+  <h2>Links and contact</h2>
+  <ul class="links">
+    <li><span class="label">Email</span> <a href="02andreapez@gmail.com">02andreapez@gmail.com</a></li>
+    <li><span class="label">GitHub</span> <a href="https://github.com/pezwastaken">https://github.com/pezwastaken</a></li>
+    <!-- <li><span class="label">LinkedIn</span> <a href="https://www.linkedin.com/in/your-handle/">linkedin.com/in/your-handle</a></li> -->
+    <!-- <li><span class="label">CV</span> <a href="cv.pdf">cv.pdf</a></li> -->
+  </ul>
+
+  <footer>Parma, Italy</footer>
+
+</main>
+</body>
+</html>
